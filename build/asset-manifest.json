@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/MovieflixV2/static/css/main.643ef899.css",
+    "main.js": "/MovieflixV2/static/js/main.7b55b34e.js",
+    "static/media/pg.png": "/MovieflixV2/static/media/pg.8ac049f4f406c63ecbe3.png",
+    "static/media/poster.png": "/MovieflixV2/static/media/poster.09b5d37e14899962e6a5.png",
+    "static/media/backdrop.png": "/MovieflixV2/static/media/backdrop.9371c8142bf40bb8d2ec.png",
+    "static/media/adult.png": "/MovieflixV2/static/media/adult.dc68a77d5fe67041f838.png",
+    "index.html": "/MovieflixV2/index.html",
+    "main.643ef899.css.map": "/MovieflixV2/static/css/main.643ef899.css.map",
+    "main.7b55b34e.js.map": "/MovieflixV2/static/js/main.7b55b34e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.643ef899.css",
+    "static/js/main.7b55b34e.js"
+  ]
+}
