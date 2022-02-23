@@ -1,0 +1,189 @@
+.main-movie {
+    max-width: 1280px;
+    margin: auto;
+    box-shadow: 1px 4px 6px rgba(177, 177, 177, 0.349), 1px 4px 6px rgba(0, 0, 0, 0.349);
+}
+
+.main-movie .movie-img {
+    position: relative;
+}
+.main-movie .movie-img img {
+    width: 100%;
+}
+
+.main-movie .movie-img .play-icon {
+    width: 5.2rem;
+    height: 5.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0 0 0 0px;
+    position: absolute;
+    top: 50%;
+    box-sizing: border-box;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    cursor: pointer;
+}
+.main-movie .movie-img .play-icon i {
+    background-color: #19bec8;
+    border: 3px solid snow;
+    margin: auto;
+
+    border-radius: 50%;
+    box-sizing: border-box;
+    padding: 1.2rem 1.55rem;
+    font-size: 3rem;
+    margin-left: 4px;
+
+    transition: all 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+.main-movie .movie-img .play-icon i:hover {
+    border: 3px solid #19bec8;
+    transform: scale(1.08);
+}
+
+.main-movie .movie-info {
+    z-index: 99;
+    padding: 20px 10px;
+    display: grid;
+    grid-template-columns: 7fr 2fr;
+}
+.main-movie .movie-info .movie-info-1 img {
+    width: 180px;
+    box-shadow: 1px 4px 6px rgba(177, 177, 177, 0.349), 1px 4px 6px rgba(0, 0, 0, 0.349);
+    border-radius: 5px;
+    margin: 4px 32px;
+}
+.movie-info-1 {
+    display: flex;
+}
+
+.main-movie .movie-info .movie-info-1 .movie-info-main {
+    height: 100%;
+    padding: 0px 25px 0 0;
+    border-right: solid 2px gray;
+}
+.main-movie .movie-info .movie-info-1 .movie-info-main h1 {
+    padding: 8px 0;
+}
+.main-movie .movie-info .movie-info-1 .movie-info-main h2 {
+    padding: 4px 0;
+}
+.main-movie .movie-info .movie-info-1 .movie-info-main h3 {
+    padding: 14px 0 4px;
+}
+.main-movie .movie-info .movie-info-1 .movie-info-main p {
+    padding: 0px 0;
+    line-height: 1.2;
+    color: rgb(222, 222, 222);
+}
+.main-movie .movie-info .movie-info-main ul {
+    list-style: none;
+    display: flex;
+}
+.main-movie .movie-info .movie-info-main ul li {
+    padding-right: 8px;
+}
+.main-movie .movie-info .movie-info-main ul li::after {
+    content: ',';
+}
+.main-movie .movie-info .movie-info-main ul li:last-child:after {
+    content: '';
+}
+
+.main-movie .movie-info .movie-info-sec {
+    padding: 12px;
+}
+.main-movie .movie-info .movie-info-sec img {
+    width: 50px;
+    box-shadow: none;
+    text-align: center;
+}
+.main-movie .movie-info .movie-info-sec h3 {
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: rgb(205, 205, 205);
+    margin: 8px 0;
+}
+.main-movie .movie-info .movie-info-sec h3 span {
+    font-size: 1.125rem;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+}
+
+.main-movie .movie-info .movie-info-sec ul {
+    list-style: none;
+    margin: 8px 0;
+    display: flex;
+}
+
+.main-movie .movie-info .movie-info-sec ul li {
+    font-size: 1.4rem;
+    padding: 2px;
+}
+
+.main-movie .movie-info .movie-info-sec ul li .gray {
+    color: rgb(65, 65, 65);
+}
+
+/* responsive */
+
+@media (max-width: 809px) {
+    .main-movie .movie-info {
+        z-index: 99;
+        padding: 20px 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .main-movie .movie-info .movie-info-1 .movie-info-main {
+        height: 100%;
+        padding: 0px 25px 0 0;
+        border: none;
+    }
+    .main-movie .movie-info .movie-info-sec {
+        text-align: center;
+    }
+    .main-movie .movie-info .movie-info-1 .movie-info-main p {
+        padding: 0px 0;
+        line-height: 1.2;
+        font-size: 0.95rem;
+        color: rgb(222, 222, 222);
+    }
+    .main-movie .movie-info .movie-info-sec ul {
+        align-items: center;
+        justify-content: center;
+    }
+    .main-movie .movie-info .movie-info-1 img {
+        width: 150px;
+    }
+}
+
+@media (max-width: 720px) {
+    .main-movie .movie-info {
+        margin: 0 4%;
+    }
+    .main-movie .movie-info .movie-info-1 img {
+        width: 150px;
+        display: none;
+    }
+    .main-movie .movie-img .play-icon {
+        width: 4rem;
+        height: 4rem;
+        transform: translate(-50%, -30%);
+    }
+    .main-movie .movie-img .play-icon i {
+        background-color: #19bec8;
+        border: 3px solid snow;
+        margin: auto;
+
+        border-radius: 50%;
+        box-sizing: border-box;
+        padding: 1rem 1.2rem;
+        font-size: 2rem;
+        margin-left: 4px;
+
+        transition: all 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    }
+}

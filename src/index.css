@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    background-color: #151824;
+    max-width: 1820px;
+    margin: auto;
+}
+
+body {
+    background-color: #151824;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Lato', sans-serif;
+    z-index: 1;
+    overflow-x: hidden;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.container-m {
+    max-width: 1700px;
+    margin: auto;
+}
+
+.container-p {
+    max-width: 1400px;
+    margin: auto;
+}
+.container-s {
+    max-width: 1100px;
+    margin: auto;
+}
+hr {
+    /* margin: ; */
+    border: 0;
+    margin: 2.5rem auto;
+    max-width: 80%;
+    background-position: 50%;
+    height: 0.8px;
+    background-image: radial-gradient(
+        closest-side,
+        hsla(0, 0%, 50%, 1),
+        hsla(0, 0%, 50%, 0) 100%
+    );
+}

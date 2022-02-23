@@ -1,0 +1,51 @@
+.genre-page .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin: 20px auto 50px;
+}
+
+.pagination button {
+    padding: 1.2rem 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+.pagination button:first-child {
+    border-bottom-left-radius: 12px;
+    border-top-left-radius: 12px;
+}
+.pagination button:last-child {
+    border-bottom-right-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+@media (max-width: 840px) {
+    .pagination button {
+        padding: 1rem 1.1rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 670px) {
+    .pagination button {
+        padding: 1rem 0.7rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .pagination button {
+        padding: 1rem 0.5rem;
+        font-size: 0.8rem;
+    }
+}
+@media (max-width: 391px) {
+    .pagination button {
+        padding: 1rem 0.4rem;
+        font-size: 0.7rem;
+    }
+}

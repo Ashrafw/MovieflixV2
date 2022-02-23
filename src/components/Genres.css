@@ -1,0 +1,308 @@
+.genres {
+    width: 90%;
+    margin: auto;
+    padding: 15px 0;
+    margin-top: 0px;
+    /* box-shadow: 0 14px 28px rgba(213, 223, 235, 0.5), 0 10px 10px rgba(162, 201, 226, 0.42); */
+    margin-bottom: 40px;
+}
+
+.genres .posters .posters-section {
+    position: relative;
+    padding: 0 6px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(20, 1fr);
+    transition: all 1.2s ease-in-out;
+    /* width: 100vw; */
+}
+.posters .posters-section .poster {
+    padding: 0;
+    margin: 0;
+    transition: all 0.6s ease-in-out;
+}
+
+.posters .posters-section .poster::before {
+    content: '';
+    position: absolute;
+    left: -3px;
+    height: 0%;
+    transition: all 0.8s ease;
+    width: 3px;
+    background-color: #19bec8;
+}
+.posters {
+    position: relative;
+    overflow: hidden;
+}
+.posters .poster-cards {
+    width: 100%;
+}
+.posters .poster {
+    position: relative;
+}
+.overlay-init {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* padding: 22px 25px; */
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.overlay-init h3 {
+    padding: 8px;
+}
+.overlay-init h5 {
+    padding: 8px;
+    color: rgb(228, 228, 228);
+}
+.overlay-init p {
+    padding: 8px;
+    color: rgb(194, 194, 194);
+    font-size: 1.1rem;
+    line-height: 1.2;
+}
+
+.posters .poster:hover .overlay-init {
+    opacity: 1;
+}
+
+.posters .posters-section .poster:hover {
+    transform: scale(1.02);
+    z-index: 100;
+}
+
+.posters .posters-section .poster:hover::before {
+    height: 100%;
+}
+.posters .chevron-left {
+    z-index: 100;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    transform: translateX(0%);
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: rgba(255, 255, 255, 0.35);
+    border: none;
+    cursor: pointer;
+}
+
+.posters .chevron-right {
+    z-index: 100;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.22);
+    color: rgba(255, 255, 255, 0.35);
+    right: 0;
+    transform: translateX(100%);
+    top: 0;
+    height: 100%;
+    transform: translateX(0%);
+    cursor: pointer;
+}
+.posters i {
+    font-size: 4rem;
+    padding: 10px;
+}
+
+.posters .chevron-left:hover {
+    background-color: rgba(0, 0, 0, 0.85);
+    color: rgb(255, 255, 255);
+}
+.posters .chevron-right:hover {
+    background-color: rgba(0, 0, 0, 0.85);
+    color: rgb(255, 255, 255);
+}
+
+.genres .posters .poster {
+    width: 240px;
+}
+
+.genres .posters .poster img {
+    transition: all 0.2s ease-in-out;
+    border-radius: 1px;
+    cursor: pointer;
+    width: 100%;
+}
+/* .genres .posters .poster img:hover {
+    box-shadow: 4px 8px 8px rgb(182, 2, 2), 4px 8px 8px rgb(182, 2, 2);
+} */
+
+.genre-titles a {
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+    color: white;
+    font-weight: 600;
+    margin: 20px 5px 30px 0;
+    position: relative;
+    cursor: pointer;
+    display: block;
+    z-index: 100;
+}
+
+.genre-titles a:hover {
+    color: #19bfc8;
+}
+
+.genre-titles .explore {
+    position: absolute;
+    padding: 0;
+    margin-left: 4px;
+    top: 0px;
+    left: 0px;
+    font-size: 1rem;
+    opacity: 0;
+    transform: translateY(50%);
+}
+
+.genre-titles .explore i {
+    font-size: 1rem;
+    margin-top: 2px;
+    margin-left: 5px;
+    font-weight: 800;
+}
+
+.genre-titles a:hover .explore {
+    color: white;
+    animation: moveExplore 1s ease-in forwards;
+}
+
+@keyframes moveExplore {
+    0% {
+        opacity: 0;
+        transform: translate(0%, 50%);
+    }
+    30% {
+        opacity: 0;
+        transform: translate(60%, 50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(165%, 50%);
+    }
+}
+
+/* @media (max-width: 1850px) {
+    .genres {
+        width: 95%;
+        margin: auto;
+        padding: 15px 0;
+        margin-top: 0px;
+        margin-bottom: 40px;
+    }
+
+    .genres .posters {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .genres {
+        width: 95%;
+        margin: auto;
+        padding: 15px 0;
+        margin-top: 0px;
+        margin-bottom: 40px;
+    }
+
+    .genres .posters {
+        display: flex;
+        flex-wrap: wrap;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 20px;
+        justify-content: center;
+    }
+    .genres .posters .poster:nth-last-child(1) {
+        display: none;
+    }
+    .genres .posters .poster:nth-last-child(2) {
+        display: none;
+    }
+
+    .genres .posters .poster {
+        width: 165px;
+    }
+}
+
+@media (max-width: 1341px) {
+    .genres .posters {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 14px;
+        justify-content: center;
+    }
+    .genres .posters .poster {
+        width: 100%;
+    }
+}
+@media (max-width: 875px) {
+    .genres .posters {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 14px;
+        justify-content: center;
+    }
+    .genres .posters .poster:nth-last-child(1) {
+        display: inline-block;
+    }
+    .genres .posters .poster:nth-last-child(2) {
+        display: inline-block;
+    }
+    .genres .posters .poster:last-child {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .genres {
+        width: 95%;
+        margin: auto;
+        padding: 15px 0;
+        margin-top: 0px;
+        margin-bottom: 40px;
+    }
+    .genres .posters .poster {
+        width: 120px;
+    }
+    .genres .posters .poster:last-child {
+        display: none;
+    }
+}
+@media (max-width: 547px) {
+    .genres .posters {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 14px;
+        justify-content: center;
+    }
+    .genres .posters .poster:nth-last-child(1) {
+        display: none;
+    }
+    .genres .posters .poster:nth-last-child(2) {
+        display: none;
+    }
+    .genres .posters .poster:nth-last-child(3) {
+        display: none;
+    }
+    .genres .posters .poster:nth-last-child(4) {
+        display: none;
+    }
+} */
